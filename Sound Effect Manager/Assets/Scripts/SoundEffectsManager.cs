@@ -2,17 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Create a singleton Sound Effects Manager that will be used to channel and direct all sound effects
+/// </summary>
 public class SoundEffectsManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private static SoundEffectsManager m_instance;
+
+    /// <summary>
+    /// For everything else to be able to access the instance of Sound Effects Manager
+    /// </summary>
+    public static SoundEffectsManager Instance
     {
-        
+        get
+        {
+            return m_instance;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// Make sure there is only one Sound Effects Manager active throughout the play
+    /// </summary>
+    private void Awake()
     {
-        
+        if (m_instance == null)
+        {
+            m_instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);  
+    }
+
+    public static void PlaySound()
+    {
+
     }
 }
