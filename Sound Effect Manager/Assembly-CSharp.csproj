@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\RandomPlayer.cs" />
     <Compile Include="Assets\Scripts\SoundEffectsManager.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Gursaanj/Documents/GitHub/Sounds-Effects-Manager/Sound Effect Manager/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
