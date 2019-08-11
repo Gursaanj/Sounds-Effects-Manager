@@ -9,12 +9,12 @@ public class RandomPlayer : MonoBehaviour
     {
         if (Input.GetButton("Jump"))
         {
-            SoundEffectsManager.Instance.PlaySound("fire");
+            SoundEffectsManager.Instance.PlaySound(SOUNDEFFECTTYPE.FirstOption);
         }
 
         if (Input.GetButton("Fire1"))
         {
-            SoundEffectsManager.Instance.PlaySound("alternate");
+            SoundEffectsManager.Instance.PlaySound(SOUNDEFFECTTYPE.SecondOption);
         }
     }
 }

@@ -55,14 +55,14 @@ public class SoundEffectsManager : MonoBehaviour
     /// General sound player when passed
     /// </summary>
     /// <param name="m_soundClip"></param>
-    public void PlaySound(string m_soundClip)
+    public void PlaySound(SOUNDEFFECTTYPE m_soundClip)
     {
         switch (m_soundClip)
         {
-            case "fire":
+            case SOUNDEFFECTTYPE.FirstOption:
                 m_audioSource.PlayOneShot(m_fireSound);
                 break;
-            case "alternate":
+            case SOUNDEFFECTTYPE.SecondOption:
                 m_audioSource.PlayOneShot(m_alternateSound);
                 break;
         }
